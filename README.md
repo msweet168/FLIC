@@ -1,4 +1,4 @@
-# FLIC (Fantastic Light Illumination Controller)
+# FLIC
 
 ## What is FLIC? 
 
