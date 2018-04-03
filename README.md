@@ -3,7 +3,7 @@
 
 ## What is FLIC? 
 
-FLIC, or Fantastic Light Illumination Controller, is a smart home device that uses IR LED lights to control an assortment of smart home devices, specifically IR lights. 
+FLIC, or Fantastic Light Illumination Controller, is a smart home device that uses IR LED lights to control an assortment of smart home devices, specifically IR lights. In order to run FLIC, the IR remote library is required (linked below)
 
 ## How it works
 
