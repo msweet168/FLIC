@@ -291,6 +291,7 @@ class ViewController: UIViewController, BluetoothSerialDelegate {
         powerButton.backgroundColor = .white
         powerButton.setTitleColor(.themeColor, for: .normal)
         powerButton.setTitle("Turn Off", for: .normal)
+        changeState(enabled: true)
         
         if let view = disabledView {
             view.descriptionLabel.text = "Performing \(type)"
