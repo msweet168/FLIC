@@ -24,7 +24,7 @@ The Arduino is connected to three components: the HM-10 bluetooth chip, an IR LE
 
 This is the iOS app which controls the device. It uses the CoreBluetooth iOS framework to communicate with the chip. The app uses the BluetoothSerial class made by hoiberg. 
 
-#### BluetoothSerial: https://github.com/hoiberg/HM10-BluetoothSerial-iOS
+#### BluetoothSerial: https://github.com/hoiberg/HM10-BluetoothSerial-iOS/blob/master/HM10%20Serial/BluetoothSerial.swift
 
 The app features controls for the IR lights. It allows the user to turn the lights on and off, change the brightness and color, enable effects, and set timers. 
 
