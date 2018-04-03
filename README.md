@@ -12,7 +12,7 @@ FLIC consists of two parts, the device and the app. The device consists of an Ar
 
 FLIController is what decides what IR signal to send out. It utilizes the IR remote library written by shirriff. 
 
-#### IR remote: https://github.com/z3t0/Arduino-IRremote/blob/master
+#### IR remote: https://github.com/z3t0/Arduino-IRremote
 
 The sketch reads the serial input to decide which signal to send out. 
 
