@@ -30,11 +30,16 @@ class ViewController: UIViewController, BluetoothSerialDelegate {
     
     
     var disabledView: DisabledView?
+    var timerSelection: TimerSelection?
+    let timerDurations = [10, 30, 60, 120]
+    let timerFunctions: [Selector] = [#selector(timer10), #selector(timer30), #selector(timer60), #selector(timer120)]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         disabledView = DisabledView(width: Int(self.view.frame.width), height: Int(self.view.frame.height))
+        timerSelection = TimerSelection(width: Int(self.view.frame.width), height: Int(self.view.frame.height))
         
         serial.delegate = self
         
@@ -186,12 +191,7 @@ class ViewController: UIViewController, BluetoothSerialDelegate {
     
     
     
-    
-    
-    
-    
-    
-    //MARK: Actions
+    //MARK: Objc Functions and Actions
     
     @IBAction func togglePower() {
         if poweredOn {
@@ -263,8 +263,6 @@ class ViewController: UIViewController, BluetoothSerialDelegate {
     }
     
     
-    
-    
     @IBAction func startStrobe() {
         effectStart(type: "strobe")
         serial.sendMessageToDevice("S")
@@ -312,7 +310,41 @@ class ViewController: UIViewController, BluetoothSerialDelegate {
     
     
     @IBAction func setTimer() {
-        
+        if let view = timerSelection {
+            view.titleLabel.text = "Choose timer duration"
+            for (index, button) in view.timerButtons.enumerated() {
+                button.setTitle("\(timerDurations[index]) Mins", for: .normal)
+                button.addTarget(self, action: timerFunctions[index], for: UIControlEvents.touchUpInside)
+                button.addTarget(self, action: #selector(dismissTimerView), for: UIControlEvents.touchUpInside)
+            }
+            self.view.addSubview(view)
+            view.fadeIn(duration: 0.4)
+        }
+    }
+    
+    @objc func dismissTimerView() {
+        timerSelection?.fadeOut(duration: 0.4)
+        timerSelection?.removeFromSuperview()
+    }
+    
+    @objc func timer10() {
+        serial.sendMessageToDevice("1")
+        setStatus(status: "10 min timer set")
+    }
+    
+    @objc func timer30() {
+        serial.sendMessageToDevice("3")
+        setStatus(status: "30 min timer set")
+    }
+    
+    @objc func timer60() {
+        serial.sendMessageToDevice("6")
+        setStatus(status: "1 hour timer set")
+    }
+
+    @objc func timer120() {
+        serial.sendMessageToDevice("0")
+        setStatus(status: "2 hour timer set")
     }
     
     //TODO: Temporary!
@@ -327,12 +359,6 @@ class ViewController: UIViewController, BluetoothSerialDelegate {
         //TODO: Make sure this actually works.
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
-    
     
     /// Changes button alpha to show that it is being tapped.
     @objc func select(sender: UIButton) {

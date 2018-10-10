@@ -10,8 +10,6 @@ import UIKit
 import CoreBluetooth
 
 class ConnectorController: UIViewController, BluetoothSerialDelegate {
-   
-    
     
     @IBOutlet var connectButton: UIButton!
 
@@ -40,6 +38,4 @@ class ConnectorController: UIViewController, BluetoothSerialDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
 }

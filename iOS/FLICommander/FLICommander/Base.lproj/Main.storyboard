@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EDO-rs-oBV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EDO-rs-oBV">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-Bold</string>
-            <string>AvenirNext-Medium</string>
-            <string>AvenirNext-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Connector Controller-->
         <scene sceneID="mXt-Si-D5d">
@@ -56,10 +49,13 @@
                                     <segue destination="293-l8-mIf" kind="presentation" identifier="toScan" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="1rQ-PG-g1R"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1Q-GL-WIs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1Q-GL-WIs">
                                 <rect key="frame" x="184" y="522" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2xF-hV-hvX"/>
+                                    <constraint firstAttribute="width" constant="46" id="CdY-82-umQ"/>
+                                </constraints>
+                                <state key="normal" title="Test">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -84,7 +80,9 @@
                             <constraint firstItem="Hp2-jX-auZ" firstAttribute="bottom" secondItem="4sY-bQ-YoY" secondAttribute="bottom" constant="77" id="OfX-vH-QVK"/>
                             <constraint firstItem="cmf-Ul-37M" firstAttribute="top" secondItem="rhX-fD-ilr" secondAttribute="bottom" constant="7" id="Q6m-Li-orb"/>
                             <constraint firstItem="rhX-fD-ilr" firstAttribute="top" secondItem="Hp2-jX-auZ" secondAttribute="top" constant="20" id="amE-Dp-Ml9"/>
+                            <constraint firstItem="V1Q-GL-WIs" firstAttribute="top" secondItem="Lr0-jr-LD6" secondAttribute="bottom" constant="34" id="hP5-gE-bDb"/>
                             <constraint firstItem="4sY-bQ-YoY" firstAttribute="centerX" secondItem="Hp2-jX-auZ" secondAttribute="centerX" id="oJO-VU-UPu"/>
+                            <constraint firstItem="V1Q-GL-WIs" firstAttribute="centerX" secondItem="IPi-eD-82F" secondAttribute="centerX" id="pgS-wx-A8v"/>
                             <constraint firstItem="rhX-fD-ilr" firstAttribute="centerX" secondItem="Hp2-jX-auZ" secondAttribute="centerX" id="yfI-Jz-YUt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hp2-jX-auZ"/>
@@ -274,6 +272,9 @@
                                 <state key="normal" title="Set Timer">
                                     <color key="titleColor" red="0.2274509804" green="0.32549019610000002" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="setTimer" destination="BYZ-38-t0r" eventType="touchUpInside" id="FqB-YK-ejb"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqr-bc-dgZ">
                                 <rect key="frame" x="0.0" y="736" width="414" height="0.0"/>
@@ -412,14 +413,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bum-vz-f34">
-                                                    <rect key="frame" x="14.999999999999996" y="18.000000000000004" width="49.666666666666664" height="34.333333333333336"/>
+                                                    <rect key="frame" x="19.999999999999996" y="18.000000000000004" width="49.666666666666664" height="34.333333333333336"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Unavailable" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="prk-ss-yuM">
-                                                    <rect key="frame" x="306.66666666666669" y="26" width="92.333333333333329" height="23.333333333333332"/>
+                                                    <rect key="frame" x="301.66666666666669" y="26" width="92.333333333333329" height="23.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

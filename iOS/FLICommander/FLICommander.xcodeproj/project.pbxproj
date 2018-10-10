@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		51491397206C410400C55427 /* DisabledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51491396206C410400C55427 /* DisabledView.swift */; };
 		51491399206C411C00C55427 /* DisabledView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51491398206C411C00C55427 /* DisabledView.xib */; };
+		51ACFEB4216DBE06008F0488 /* TimerSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ACFEB3216DBE06008F0488 /* TimerSelection.swift */; };
+		51ACFEB6216DBE17008F0488 /* TimerSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51ACFEB5216DBE17008F0488 /* TimerSelection.xib */; };
 		A2C60923206759C800C7E2F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C60922206759C800C7E2F7 /* AppDelegate.swift */; };
 		A2C60925206759C800C7E2F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C60924206759C800C7E2F7 /* ViewController.swift */; };
 		A2C60928206759C800C7E2F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C60926206759C800C7E2F7 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		51491396206C410400C55427 /* DisabledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisabledView.swift; sourceTree = "<group>"; };
 		51491398206C411C00C55427 /* DisabledView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisabledView.xib; sourceTree = "<group>"; };
+		51ACFEB3216DBE06008F0488 /* TimerSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSelection.swift; sourceTree = "<group>"; };
+		51ACFEB5216DBE17008F0488 /* TimerSelection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerSelection.xib; sourceTree = "<group>"; };
 		A2C6091F206759C800C7E2F7 /* FLICommander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLICommander.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C60922206759C800C7E2F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2C60924206759C800C7E2F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 				A2C6093A20677ED800C7E2F7 /* Declarations.swift */,
 				51491396206C410400C55427 /* DisabledView.swift */,
 				51491398206C411C00C55427 /* DisabledView.xib */,
+				51ACFEB3216DBE06008F0488 /* TimerSelection.swift */,
+				51ACFEB5216DBE17008F0488 /* TimerSelection.xib */,
 				A2C6093620675AB800C7E2F7 /* BluetoothSerial.swift */,
 				A2C60926206759C800C7E2F7 /* Main.storyboard */,
 				A2C60929206759C800C7E2F7 /* Assets.xcassets */,
@@ -144,6 +150,7 @@
 				51491399206C411C00C55427 /* DisabledView.xib in Resources */,
 				A2C6092D206759C800C7E2F7 /* LaunchScreen.storyboard in Resources */,
 				A2C6092A206759C800C7E2F7 /* Assets.xcassets in Resources */,
+				51ACFEB6216DBE17008F0488 /* TimerSelection.xib in Resources */,
 				A2C60928206759C800C7E2F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +168,7 @@
 				A2C60925206759C800C7E2F7 /* ViewController.swift in Sources */,
 				A2C60923206759C800C7E2F7 /* AppDelegate.swift in Sources */,
 				A2C6093720675AB800C7E2F7 /* BluetoothSerial.swift in Sources */,
+				51ACFEB4216DBE06008F0488 /* TimerSelection.swift in Sources */,
 				A2C6093D2067833400C7E2F7 /* ConnectorController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
