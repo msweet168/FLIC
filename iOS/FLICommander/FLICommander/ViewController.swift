@@ -318,12 +318,12 @@ class ViewController: UIViewController, BluetoothSerialDelegate {
                 button.addTarget(self, action: #selector(dismissTimerView), for: UIControlEvents.touchUpInside)
             }
             self.view.addSubview(view)
-            view.fadeIn(duration: 0.4)
+            view.fadeIn()
         }
     }
     
     @objc func dismissTimerView() {
-        timerSelection?.fadeOut(duration: 0.4)
+        timerSelection?.fadeOut()
         timerSelection?.removeFromSuperview()
     }
     
